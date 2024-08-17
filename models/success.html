@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form  action="/" method="POST">
+        <div id="updateform">
+        <input type="text" id="hidden" name="hidden" value="3" placeholder=".">
+        <label>Employee Id :</label><input type="text" name="id" placeholder="Id"><br>
+        <label>Employee Name:</label><input type="text" name="name" placeholder="Name"><br>
+        <label>Employee Age:</label><input type="number" name="age" placeholder="Age"><br>
+        <label>Employee Designation:</label><input type="text" name="desg" placeholder="Designation"><br>
+        <label>Employee MObile No:</label><input type="number" name="mobile" placeholder="Mobile no."><br>
+        <button type="submit" id="add" onclick="backto()">Update Employee</button>
+    </div>
+    </form>
+        <script>
+           document.getElementById("hidden").value=3;
+           console.log("hello check");
+             fetch('/update').then(response => response.json()).then(user => {
+            console.log(user[0].name);
+           const datas=user;
+           document.getElementsByName('id').value=datas[0].id;
+           document.getElementsByName('name').value=datas[0].name;
+           document.getElementsByName('age').value=datas[0].age;
+           document.getElementsByName('desg').value=datas[0].designation;
+           document.getElementsByName('mobile').value=datas[0].mobile;
+           document.getElementById('hidden').value=3;
+           
+    });
+        </script>
+   
+</body>
+</html>

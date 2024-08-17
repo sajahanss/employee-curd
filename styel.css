@@ -1,0 +1,53 @@
+td{
+    text-align: left;
+}
+#addform{
+    width: 40vw;  
+    
+
+}
+body{
+    width: 100%;
+}
+.table{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+.table>tr>td,th{
+    width: 200px;
+    text-align: left;
+}
+#enterance{
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #dfdfdf;
+    border-bottom: 2px solid black;
+}
+label{
+   
+    margin-bottom: 10px;
+
+}
+input{
+    border-radius: 3px;
+    height: 30px;
+    margin-bottom: 10px;
+    width: 250px;
+}
+
+button{
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    height: 35px;
+}
+
